@@ -6,7 +6,7 @@
 
 ![ci](https://github.com/react-financial/react-financial-charts/workflows/ci/badge.svg)
 [![codecov](https://codecov.io/gh/reactivemarkets/react-financial-charts/branch/master/graph/badge.svg)](https://codecov.io/gh/reactivemarkets/react-financial-charts)
- [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/react-financial/react-financial-charts/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react-financial-charts.svg?style=flat)](https://www.npmjs.com/package/react-financial-charts)
+[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/react-financial/react-financial-charts/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react-financial-charts.svg?style=flat)](https://www.npmjs.com/package/react-financial-charts)
 
 Charts dedicated to finance.
 
@@ -15,7 +15,8 @@ The aim with this project is create financial charts that work out of the box.
 ## Compatibility
 
 This library is compatible with:
-- **React 16.x, 17.x, 18.x, and 19.x**
+
+- **React 17.x, 18.x, and 19.x**
 - **TypeScript 5.x**
 - **Node.js 18+**
 
@@ -95,7 +96,7 @@ npm start
 
 - [x] Convert to typescript
 - [x] Bump dependencies to latest
-- [x] Remove React 16 warnings
+- [x] Remove React 16 support (modernized to React 17+)
 - [x] Add CI
 - [x] Fix passive scrolling issues
 - [x] Implement PRs from react-stockcharts
