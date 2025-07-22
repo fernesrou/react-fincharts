@@ -32,6 +32,7 @@ export class CrossHairCursor extends React.Component<CrossHairCursorProps> {
     };
 
     public static contextType = ChartCanvasContext;
+    declare public context: React.ContextType<typeof ChartCanvasContext>;
 
     public render() {
         return (

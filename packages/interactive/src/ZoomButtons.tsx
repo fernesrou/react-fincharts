@@ -27,6 +27,7 @@ export class ZoomButtons extends React.Component<ZoomButtonsProps> {
     };
 
     public static contextType = ChartContext;
+    declare public context: React.ContextType<typeof ChartContext>;
 
     private interval?: number;
 
@@ -135,17 +136,22 @@ export class ZoomButtons extends React.Component<ZoomButtonsProps> {
     private readonly zoom = (direction: number) => {
         const { xAxisZoom, xScale, plotData, xAccessor } = this.context;
 
-        const cx = xScale(xAccessor(last(plotData)));
+        if (!xAxisZoom || !xScale || !plotData || plotData.length === 0 || !xAccessor) {
+            return;
+        }
+
+        const scale = xScale as any; // Cast to any to access scale methods
+        const cx = scale(xAccessor(last(plotData)));
 
         const { zoomMultiplier } = this.props;
 
         const c = direction > 0 ? 1 * zoomMultiplier : 1 / zoomMultiplier;
 
-        const [start, end] = xScale.domain();
-        const [newStart, newEnd] = xScale
+        const [start, end] = scale.domain();
+        const [newStart, newEnd] = scale
             .range()
             .map((x: number) => cx + (x - cx) * c)
-            .map(xScale.invert);
+            .map(scale.invert);
 
         const left = interpolateNumber(start, newStart);
         const right = interpolateNumber(end, newEnd);

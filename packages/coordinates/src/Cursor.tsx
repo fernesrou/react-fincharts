@@ -40,6 +40,7 @@ export class Cursor extends React.Component<CursorProps> {
     };
 
     public static contextType = ChartCanvasContext;
+    declare public context: React.ContextType<typeof ChartCanvasContext>;
 
     public render() {
         return (

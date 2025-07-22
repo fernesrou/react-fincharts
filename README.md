@@ -12,6 +12,13 @@ Charts dedicated to finance.
 
 The aim with this project is create financial charts that work out of the box.
 
+## Compatibility
+
+This library is compatible with:
+- **React 16.x, 17.x, 18.x, and 19.x**
+- **TypeScript 5.x**
+- **Node.js 18+**
+
 ## Features
 
 - integrates multiple chart types
@@ -100,6 +107,10 @@ npm start
 - [x] Correct all class props
 - [x] Migrate to new React Context API
 - [x] Remove all UNSAFE methods
+- [x] Add React 18 & 19 compatibility
+- [x] Update to modern JSX transform
+- [x] Upgrade to Storybook 8.x
+- [x] Upgrade TypeScript to 5.x
 - [ ] Add documentation to storybook
 - [ ] Add full test suite
 

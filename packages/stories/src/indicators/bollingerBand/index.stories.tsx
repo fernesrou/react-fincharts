@@ -1,17 +1,20 @@
-import { Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import * as React from "react";
-import { BollingerSeries, BollingerSeriesProps } from "../../../../series/src/BollingerSeries";
+import { BollingerSeries } from "../../../../series/src/BollingerSeries";
 import BollingerIndicator from "./BollingerIndicator";
 
-export default {
+const meta: Meta<typeof BollingerSeries> = {
     title: "Visualization/Indicator/Bollinger Band",
     component: BollingerSeries,
     argTypes: {
         fillStyle: { control: "color" },
-        strokeStyle: { control: null },
+        strokeStyle: { control: false },
     },
 };
 
-const Template: Story<BollingerSeriesProps> = ({ fillStyle }) => <BollingerIndicator fillStyle={fillStyle} />;
+export default meta;
+type Story = StoryObj<typeof BollingerSeries>;
 
-export const basic = Template.bind({});
+export const basic: Story = {
+    render: ({ fillStyle }) => <BollingerIndicator fillStyle={fillStyle} />,
+};

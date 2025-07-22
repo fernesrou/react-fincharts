@@ -1,12 +1,9 @@
-import { Story } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 import * as React from "react";
-import {
-    AlternatingFillAreaSeries,
-    AlternatingFillAreaSeriesProps,
-} from "../../../../series/src/AlternatingFillAreaSeries";
+import { AlternatingFillAreaSeries } from "../../../../series/src/AlternatingFillAreaSeries";
 import { Daily, Intraday } from "./BasicBaselineSeries";
 
-export default {
+const meta: Meta<typeof AlternatingFillAreaSeries> = {
     component: AlternatingFillAreaSeries,
     title: "Visualization/Series/Baseline",
     args: {
@@ -20,10 +17,13 @@ export default {
     },
 };
 
-const Template: Story<AlternatingFillAreaSeriesProps> = (args) => <Daily {...args} />;
+export default meta;
+type Story = StoryObj<typeof AlternatingFillAreaSeries>;
 
-export const daily = Template.bind({});
+export const daily: Story = {
+    render: (args) => <Daily {...args} />,
+};
 
-const IntradayTemplate: Story<AlternatingFillAreaSeriesProps> = (args) => <Intraday {...args} />;
-
-export const intraday = IntradayTemplate.bind({});
+export const intraday: Story = {
+    render: (args) => <Intraday {...args} />,
+};

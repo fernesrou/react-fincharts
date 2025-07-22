@@ -1,18 +1,19 @@
-/** @type {import('@storybook/react/types').StorybookConfig} */
-module.exports = {
+/** @type {import('@storybook/react-vite').StorybookConfig} */
+export default {
     addons: ["@storybook/addon-essentials"],
-    stories: ["../src/**/*.stories.(ts|tsx|mdx)"],
-    webpackFinal: async (config) => {
-        config.module.rules.push({
-            test: /\.(js|map)$/,
-            use: "source-map-loader",
-            enforce: "pre",
-        });
-
-        return config;
+    stories: [
+        "../src/**/*.stories.@(js|jsx|ts|tsx)",
+        "../src/**/*.mdx"
+    ],
+    framework: {
+        name: "@storybook/react-vite",
+        options: {},
     },
-    reactOptions: {
-        strictMode: true,
-        fastRefresh: true,
+    typescript: {
+        reactDocgen: "react-docgen-typescript",
+        reactDocgenTypescriptOptions: {
+            shouldExtractLiteralValuesFromEnum: true,
+            propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
+        },
     },
 };

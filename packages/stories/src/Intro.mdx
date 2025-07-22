@@ -1,0 +1,44 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+<Meta title="Intro" />
+
+# React Financial Charts
+
+Charts dedicated to finance.
+
+## Features
+
+- integrates multiple chart types
+- technical indicators and overlays
+- drawing objects
+
+## Getting Started
+
+This library provides comprehensive charting solutions for financial applications.
+
+### Installation
+
+```bash
+npm install @react-financial-charts/core
+```
+
+### Basic Usage
+
+```javascript
+import { ChartCanvas, Chart } from "@react-financial-charts/core";
+import { CandlestickSeries } from "@react-financial-charts/series";
+
+const MyChart = () => {
+    return (
+        <ChartCanvas data={myData}>
+            <Chart id={1} yExtents={(d) => [d.high, d.low]}>
+                <CandlestickSeries />
+            </Chart>
+        </ChartCanvas>
+    );
+};
+```
+
+## Examples
+
+Explore the different chart types and configurations in the sidebar.
