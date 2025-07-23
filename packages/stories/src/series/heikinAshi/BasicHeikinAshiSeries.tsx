@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Chart, ChartCanvas } from "react-fincharts";
-import { XAxis, YAxis } from "react-fincharts";
-import { heikinAshi } from "react-fincharts";
-import { discontinuousTimeScaleProviderBuilder } from "react-fincharts";
-import { CandlestickSeries } from "react-fincharts";
+import { Chart, ChartCanvas } from "@react-fincharts/charts";
+import { XAxis, YAxis } from "@react-fincharts/charts";
+import { heikinAshi } from "@react-fincharts/charts";
+import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
+import { CandlestickSeries } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "react-fincharts";
+import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps {
     readonly data: IOHLCData[];

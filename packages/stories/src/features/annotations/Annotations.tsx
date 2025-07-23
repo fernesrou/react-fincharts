@@ -11,7 +11,7 @@ import {
     YAxis,
     withDeviceRatio,
     withSize,
-} from "react-fincharts";
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps extends Partial<LabelProps> {

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { forceIndex } from "react-fincharts";
+import { forceIndex } from "@react-fincharts/charts";
 import ForceIndicator from "./ForceIndicator";
 
 export default {

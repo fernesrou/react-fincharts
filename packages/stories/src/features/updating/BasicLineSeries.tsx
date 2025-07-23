@@ -10,7 +10,7 @@ import {
     withSize,
     XAxis,
     YAxis,
-} from "react-fincharts";
+} from "@react-fincharts/charts";
 import { IOHLCData, withUpdatingData, withOHLCData } from "../../data";
 
 interface ChartProps {

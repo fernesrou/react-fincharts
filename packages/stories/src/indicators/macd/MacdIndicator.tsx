@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Chart, ChartCanvas } from "react-fincharts";
-import { XAxis, YAxis } from "react-fincharts";
-import { macd } from "react-fincharts";
-import { discontinuousTimeScaleProviderBuilder } from "react-fincharts";
-import { MACDSeries } from "react-fincharts";
-import { MACDTooltip } from "react-fincharts";
+import { Chart, ChartCanvas } from "@react-fincharts/charts";
+import { XAxis, YAxis } from "@react-fincharts/charts";
+import { macd } from "@react-fincharts/charts";
+import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
+import { MACDSeries } from "@react-fincharts/charts";
+import { MACDTooltip } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "react-fincharts";
+import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps {
     readonly data: IOHLCData[];

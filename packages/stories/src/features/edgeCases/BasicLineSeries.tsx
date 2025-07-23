@@ -8,7 +8,7 @@ import {
     LineSeries,
     withDeviceRatio,
     withSize,
-} from "react-fincharts";
+} from "@react-fincharts/charts";
 import { IOHLCData } from "../../data";
 
 interface ChartProps {

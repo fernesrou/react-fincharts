@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Chart, ChartCanvas } from "react-fincharts";
-import { XAxis, YAxis } from "react-fincharts";
-import { discontinuousTimeScaleProviderBuilder } from "react-fincharts";
-import { AreaSeries, AreaSeriesProps } from "react-fincharts";
-import { withDeviceRatio, withSize } from "react-fincharts";
+import { Chart, ChartCanvas } from "@react-fincharts/charts";
+import { XAxis, YAxis } from "@react-fincharts/charts";
+import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
+import { AreaSeries, AreaSeriesProps } from "@react-fincharts/charts";
+import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps extends Partial<AreaSeriesProps> {

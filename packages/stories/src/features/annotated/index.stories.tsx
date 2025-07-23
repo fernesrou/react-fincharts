@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Annotate } from "react-fincharts";
+import { Annotate } from "@react-fincharts/charts";
 import Annotated from "./Annotated";
 
 export default {
