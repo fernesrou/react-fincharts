@@ -22,6 +22,7 @@ This library is compatible with:
 ## What's New in React FinCharts 1.0.0
 
 ### 🚀 **Major Improvements**
+
 - **React 18/19 Compatibility**: Full support for React 18 and 19 with modern lifecycle methods
 - **Package Rename**: All packages renamed from `@react-financial-charts/*` to `@react-fincharts/*`
 - **Bug Fixes**: Fixed tooltip rendering, annotation synchronization, and zoom/pan coordination issues
@@ -30,20 +31,23 @@ This library is compatible with:
 - **Clean Architecture**: Removed deprecated UNSAFE lifecycle methods
 
 ### 🔧 **Breaking Changes**
+
 - Package names changed to `@react-fincharts/*`
 - Main package renamed to `react-fincharts`
 - Some API improvements for better React 18+ compatibility
 
 ### 📦 **Migration Guide**
+
 Replace your imports:
+
 ```javascript
 // Old
-import { ChartCanvas } from 'react-financial-charts';
-import { CandlestickSeries } from '@react-financial-charts/series';
+import { ChartCanvas } from "react-financial-charts";
+import { CandlestickSeries } from "@react-financial-charts/series";
 
 // New
-import { ChartCanvas } from 'react-fincharts';
-import { CandlestickSeries } from '@react-fincharts/series';
+import { ChartCanvas } from "react-fincharts";
+import { CandlestickSeries } from "@react-fincharts/series";
 ```
 
 ---
@@ -131,22 +135,25 @@ npm start
 ## Roadmap
 
 ### ✅ **Completed (react-fincharts 1.0.0)**
+
 - [x] Fork and modernize from react-financial-charts
 - [x] Add React 18 & 19 compatibility
 - [x] Remove all UNSAFE lifecycle methods
 - [x] Fix tooltip rendering and positioning issues
 - [x] Fix annotation zoom/pan coordination
 - [x] Enhanced error handling and prop validation
-- [x] Rename packages to @react-fincharts/*
+- [x] Rename packages to @react-fincharts/\*
 - [x] Update all documentation and examples
 - [x] Optimize build process and package size
 
 ### 🚧 **In Progress**
+
 - [ ] Publish to npm registry
 - [ ] Set up GitHub Pages for documentation
 - [ ] Create comprehensive migration guide
 
 ### 📋 **Future Plans**
+
 - [ ] Add full test suite with Jest/React Testing Library
 - [ ] Performance optimizations for large datasets
 - [ ] Add more chart types and indicators
@@ -160,6 +167,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Attribution
 
 This project is a fork of:
+
 - [react-financial-charts](https://github.com/react-financial/react-financial-charts) (by Reactive Markets)
 - [react-stockcharts](https://github.com/rrag/react-stockcharts) (original project by rrag)
 

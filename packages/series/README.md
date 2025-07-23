@@ -7,6 +7,7 @@ npm install @react-fincharts/series
 ```
 
 This package contains various chart series including:
+
 - CandlestickSeries
 - LineSeries
 - AreaSeries
@@ -17,7 +18,7 @@ This package contains various chart series including:
 ## Usage
 
 ```javascript
-import { CandlestickSeries, LineSeries } from '@react-fincharts/series';
+import { CandlestickSeries, LineSeries } from "@react-fincharts/series";
 ```
 
 For complete documentation and examples, visit: [React FinCharts](https://github.com/fernesrou/react-fincharts)
