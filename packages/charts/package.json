@@ -11,7 +11,10 @@
         "LICENSE"
     ],
     "sideEffects": false,
-    "author": "reactivemarkets",
+    "author": "Fermín Roulet",
+    "publishConfig": {
+        "access": "public"
+    },
     "keywords": [
         "charts",
         "charting",
@@ -51,5 +54,5 @@
         "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
         "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
     },
-    "gitHead": "18e3996e1aae9dba6ac2cf353d316a5f90b188bb"
+    "gitHead": "e2b4be434e3e939105ba0cfd4b86aa60ffbe89f1"
 }
