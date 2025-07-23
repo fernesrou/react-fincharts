@@ -134,7 +134,18 @@ export class GenericComponent extends React.Component<GenericComponentProps, Gen
         }
 
         switch (type) {
-            case "zoom":
+            case "zoom": {
+                // Force re-render for zoom events by triggering a state update
+                // This ensures SVG components get updated scales
+                const { canvasDraw } = this.props;
+                if (canvasDraw === undefined) {
+                    const { updateCount } = this.state;
+                    this.setState({
+                        updateCount: updateCount + 1,
+                    });
+                }
+                break;
+            }
             case "mouseenter":
                 // DO NOT DRAW FOR THESE EVENTS
                 break;
@@ -311,7 +322,16 @@ export class GenericComponent extends React.Component<GenericComponentProps, Gen
         }
     }
 
-    public UNSAFE_componentWillMount() {
+    public componentWillUnmount() {
+        const { unsubscribe } = this.context;
+        unsubscribe(this.subscriberId);
+        if (this.iSetTheCursorClass) {
+            const { setCursorClass } = this.context;
+            setCursorClass(null);
+        }
+    }
+
+    public componentDidMount() {
         const { subscribe, chartId } = this.context;
         const { clip, edgeClip } = this.props;
 
@@ -324,24 +344,15 @@ export class GenericComponent extends React.Component<GenericComponentProps, Gen
             getPanConditions: this.getPanConditions,
         });
 
-        this.UNSAFE_componentWillReceiveProps(this.props, this.context);
-    }
-
-    public componentWillUnmount() {
-        const { unsubscribe } = this.context;
-        unsubscribe(this.subscriberId);
-        if (this.iSetTheCursorClass) {
-            const { setCursorClass } = this.context;
-            setCursorClass(null);
-        }
-    }
-
-    public componentDidMount() {
+        this.updateMorePropsFromContext(this.props, this.context);
         this.componentDidUpdate(this.props);
     }
 
     public componentDidUpdate(prevProps: GenericComponentProps) {
         const { canvasDraw, selected, interactiveCursorClass } = this.props;
+
+        // Update moreProps with new context data
+        this.updateMorePropsFromContext(this.props, this.context);
 
         if (prevProps.selected !== selected) {
             const { setCursorClass } = this.context;
@@ -359,22 +370,25 @@ export class GenericComponent extends React.Component<GenericComponentProps, Gen
         }
     }
 
-    public UNSAFE_componentWillReceiveProps(nextProps: GenericComponentProps, nextContext: any) {
+    private updateMorePropsFromContext(nextProps: GenericComponentProps, nextContext: any) {
         const { xScale, plotData, chartConfig, getMutableState } = nextContext;
 
-        this.moreProps = {
-            ...this.moreProps,
-            ...getMutableState(),
-            /*
-			^ this is so
-			mouseXY, currentCharts, currentItem are available to
-			newly created components like MouseHoverText which
-			is created right after a new interactive object is drawn
-			*/
-            xScale,
-            plotData,
-            chartConfig,
-        };
+        if (getMutableState) {
+            const mutableState = getMutableState();
+            this.moreProps = {
+                ...this.moreProps,
+                ...mutableState,
+                /*
+                ^ this is so
+                mouseXY, currentCharts, currentItem are available to
+                newly created components like MouseHoverText which
+                is created right after a new interactive object is drawn
+                */
+                xScale,
+                plotData,
+                chartConfig,
+            };
+        }
     }
 
     public getMoreProps() {

@@ -53,9 +53,13 @@ export class RSITooltip extends React.Component<RSITooltipProps> {
             displayValuesFor,
         } = this.props;
 
-        const {
-            chartConfig: { width, height },
-        } = moreProps;
+        const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return null;
+        }
+
+        const { width, height } = chartConfig;
 
         const currentItem = displayValuesFor(this.props, moreProps);
         const rsi = isDefined(currentItem) && yAccessor(currentItem);

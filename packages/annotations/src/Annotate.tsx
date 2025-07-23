@@ -15,16 +15,17 @@ export class Annotate extends React.Component<AnnotateProps> {
     };
 
     public render() {
-        return <GenericChartComponent svgDraw={this.renderSVG} drawOn={["pan"]} />;
+        return <GenericChartComponent svgDraw={this.renderSVG} drawOn={["pan", "zoom", "mousemove", "drag"]} />;
     }
 
     private readonly renderSVG = (moreProps: any) => {
-        const {
-            xAccessor,
-            xScale,
-            chartConfig: { yScale },
-            plotData,
-        } = moreProps;
+        const { xAccessor, xScale, chartConfig, plotData } = moreProps;
+
+        if (!chartConfig) {
+            return null;
+        }
+
+        const { yScale } = chartConfig;
 
         const { className, usingProps, with: Annotation, when } = this.props;
 

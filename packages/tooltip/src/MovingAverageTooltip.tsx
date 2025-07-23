@@ -110,6 +110,11 @@ export class MovingAverageTooltip extends React.Component<MovingAverageTooltipPr
 
         const config = chartConfig!;
 
+        // Safely handle config.origin with fallback
+        if (!config || !config.origin) {
+            return null;
+        }
+
         const origin = functor(originProp);
         const [x, y] = origin(width, height);
         const [ox, oy] = config.origin;

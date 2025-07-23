@@ -122,6 +122,11 @@ export class AlternatingFillAreaSeries extends React.Component<AlternatingFillAr
 
     private readonly renderClip = (moreProps: any) => {
         const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return null;
+        }
+
         const { baseAt } = this.props;
         const { yScale, width, height } = chartConfig;
 
@@ -139,6 +144,11 @@ export class AlternatingFillAreaSeries extends React.Component<AlternatingFillAr
 
     private readonly bottomClip = (ctx: CanvasRenderingContext2D, moreProps: any) => {
         const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return;
+        }
+
         const { baseAt } = this.props;
         const { yScale, width, height } = chartConfig;
 
@@ -149,6 +159,11 @@ export class AlternatingFillAreaSeries extends React.Component<AlternatingFillAr
 
     private readonly topClip = (ctx: CanvasRenderingContext2D, moreProps: any) => {
         const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return;
+        }
+
         const { baseAt } = this.props;
         const { yScale, width } = chartConfig;
 

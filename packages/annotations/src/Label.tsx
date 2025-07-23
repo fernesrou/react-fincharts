@@ -38,7 +38,13 @@ export class Label extends React.Component<LabelProps> {
     public render() {
         const { selectCanvas } = this.props;
 
-        return <GenericComponent canvasToDraw={selectCanvas} canvasDraw={this.drawOnCanvas} drawOn={[]} />;
+        return (
+            <GenericComponent
+                canvasToDraw={selectCanvas}
+                canvasDraw={this.drawOnCanvas}
+                drawOn={["pan", "zoom", "mousemove", "drag"]}
+            />
+        );
     }
 
     private readonly drawOnCanvas = (ctx: CanvasRenderingContext2D, moreProps: any) => {

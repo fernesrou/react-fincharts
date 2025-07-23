@@ -45,7 +45,13 @@ export class GroupTooltip extends React.Component<GroupTooltipProps> {
 
     private readonly getPosition = (moreProps: any) => {
         const { position } = this.props;
-        const { height, width } = moreProps.chartConfig;
+        const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return { xyPos: [null, null], textAnchor: undefined };
+        }
+
+        const { height, width } = chartConfig;
 
         const dx = 20;
         const dy = 40;

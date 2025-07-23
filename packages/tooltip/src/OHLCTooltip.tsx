@@ -71,10 +71,14 @@ export class OHLCTooltip extends React.Component<OHLCTooltipProps> {
             textFill,
         } = this.props;
 
-        const {
-            chartConfig: { width, height },
-            fullData,
-        } = moreProps;
+        const { chartConfig, fullData } = moreProps;
+
+        // Safely handle chartConfig with fallback
+        if (!chartConfig) {
+            return null;
+        }
+
+        const { width, height } = chartConfig;
 
         const currentItem = displayValuesFor(this.props, moreProps) ?? last(fullData);
 

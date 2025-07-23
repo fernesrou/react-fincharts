@@ -61,10 +61,13 @@ export class StochasticTooltip extends React.Component<StochasticTooltipProps> {
             appearance,
             labelFill,
         } = this.props;
-        const {
-            chartConfig: { width, height },
-            fullData,
-        } = moreProps;
+        const { chartConfig, fullData } = moreProps;
+
+        if (!chartConfig) {
+            return null;
+        }
+
+        const { width, height } = chartConfig;
 
         const currentItem = displayValuesFor(this.props, moreProps) ?? fullData[fullData.length - 1];
 

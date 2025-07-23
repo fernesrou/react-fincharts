@@ -119,6 +119,11 @@ export class RSISeries extends React.Component<RSISeriesProps> {
 
     private readonly renderClip = (moreProps: any) => {
         const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return null;
+        }
+
         const { overSold, overBought } = this.props;
         const { yScale, width, height } = chartConfig;
 
@@ -137,6 +142,11 @@ export class RSISeries extends React.Component<RSISeriesProps> {
 
     private readonly mainClip = (ctx: CanvasRenderingContext2D, moreProps: any) => {
         const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return;
+        }
+
         const { overSold, overBought } = this.props;
         const { yScale, width, height } = chartConfig;
 
@@ -148,6 +158,11 @@ export class RSISeries extends React.Component<RSISeriesProps> {
 
     private readonly topAndBottomClip = (ctx: CanvasRenderingContext2D, moreProps: any) => {
         const { chartConfig } = moreProps;
+
+        if (!chartConfig) {
+            return;
+        }
+
         const { overSold, overBought } = this.props;
         const { yScale, width } = chartConfig;
 
