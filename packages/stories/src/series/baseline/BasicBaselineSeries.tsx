@@ -7,9 +7,10 @@ import {
     discontinuousTimeScaleProviderBuilder,
     AlternatingFillAreaSeries,
     AlternatingFillAreaSeriesProps,
+    withDeviceRatio,
+    withSize,
 } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps extends Partial<AlternatingFillAreaSeriesProps> {
     readonly data: IOHLCData[];

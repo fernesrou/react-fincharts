@@ -7,9 +7,10 @@ import {
     discontinuousTimeScaleProviderBuilder,
     BarSeries,
     BarSeriesProps,
+    withDeviceRatio,
+    withSize,
 } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps extends Partial<BarSeriesProps> {
     readonly data: IOHLCData[];

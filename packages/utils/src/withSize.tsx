@@ -12,7 +12,7 @@ export const withSize = (props?: Omit<AutoSizerProps, "children">) => {
             public render() {
                 // Filter out disableHeight and disableWidth to avoid type conflicts
                 const { disableHeight, disableWidth, ...autoSizerProps } = props || {};
-                
+
                 return (
                     <AutoSizer {...autoSizerProps}>
                         {({ height, width }) => {

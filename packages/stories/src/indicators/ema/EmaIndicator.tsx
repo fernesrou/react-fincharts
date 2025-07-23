@@ -1,4 +1,4 @@
-﻿import * as React from "react";
+import * as React from "react";
 import {
     Chart,
     ChartCanvas,
@@ -8,9 +8,10 @@ import {
     discontinuousTimeScaleProviderBuilder,
     LineSeries,
     MovingAverageTooltip,
+    withDeviceRatio,
+    withSize,
 } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps {
     readonly data: IOHLCData[];
