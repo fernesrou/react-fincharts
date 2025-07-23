@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import { forceIndex } from "@react-fincharts/charts";
 import ForceIndicator from "./ForceIndicator";
 
@@ -13,4 +13,3 @@ export default {
 };
 
 export const basic = () => <ForceIndicator />;
-

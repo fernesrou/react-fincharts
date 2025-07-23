@@ -1,11 +1,17 @@
-import { format } from "d3-format";
+﻿import { format } from "d3-format";
 import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { ema, forceIndex } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { LineSeries, StraightLine } from "@react-fincharts/charts";
-import { SingleValueTooltip } from "@react-fincharts/charts";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    ema,
+    forceIndex,
+    discontinuousTimeScaleProviderBuilder,
+    LineSeries,
+    StraightLine,
+    SingleValueTooltip,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
@@ -81,4 +87,3 @@ class ForceIndicator extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(ForceIndicator)));
-

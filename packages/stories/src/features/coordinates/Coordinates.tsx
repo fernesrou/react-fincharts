@@ -1,4 +1,4 @@
-import { format } from "d3-format";
+﻿import { format } from "d3-format";
 import * as React from "react";
 import {
     discontinuousTimeScaleProviderBuilder,
@@ -68,4 +68,3 @@ class Coordinates extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Coordinates)));
-

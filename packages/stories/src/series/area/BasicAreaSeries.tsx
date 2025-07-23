@@ -1,9 +1,15 @@
-import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { AreaSeries, AreaSeriesProps } from "@react-fincharts/charts";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
+﻿import * as React from "react";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    discontinuousTimeScaleProviderBuilder,
+    AreaSeries,
+    AreaSeriesProps,
+    withDeviceRatio,
+    withSize,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps extends Partial<AreaSeriesProps> {
@@ -64,4 +70,3 @@ export const Daily = withOHLCData()(withSize({ style: { minHeight: 600 } })(with
 export const Intraday = withOHLCData("MINUTES")(
     withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicAreaSeries)),
 );
-

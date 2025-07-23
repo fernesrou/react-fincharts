@@ -1,9 +1,13 @@
-import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { pointAndFigure } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { PointAndFigureSeries } from "@react-fincharts/charts";
+﻿import * as React from "react";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    pointAndFigure,
+    discontinuousTimeScaleProviderBuilder,
+    PointAndFigureSeries,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
@@ -67,4 +71,3 @@ export const Daily = withOHLCData()(
 export const Intraday = withOHLCData("MINUTES")(
     withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicPointAndFigureSeries)),
 );
-

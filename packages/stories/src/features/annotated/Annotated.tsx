@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import {
     Annotate,
     ema,
@@ -101,4 +101,3 @@ class Annotated extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Annotated)));
-

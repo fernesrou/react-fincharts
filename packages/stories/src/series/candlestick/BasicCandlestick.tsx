@@ -1,10 +1,15 @@
-import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { CandlestickSeries } from "@react-fincharts/charts";
+﻿import * as React from "react";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    discontinuousTimeScaleProviderBuilder,
+    CandlestickSeries,
+    withDeviceRatio,
+    withSize,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps {
     readonly data: IOHLCData[];
@@ -60,4 +65,3 @@ export const Daily = withOHLCData()(withSize({ style: { minHeight: 600 } })(with
 export const Intraday = withOHLCData("MINUTES")(
     withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicCandlestick)),
 );
-

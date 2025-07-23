@@ -1,4 +1,4 @@
-import { format } from "d3-format";
+﻿import { format } from "d3-format";
 import { timeFormat } from "d3-time-format";
 import * as React from "react";
 import {
@@ -108,4 +108,3 @@ class Tooltips extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Tooltips)));
-

@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import {
     lastVisibleItemBasedZoomAnchor,
     mouseBasedZoomAnchor,
@@ -25,4 +25,3 @@ export const zoomAnchorToMouse = () => <Interaction zoomAnchor={mouseBasedZoomAn
 export const zoomAnchorToLastVisible = () => <Interaction zoomAnchor={lastVisibleItemBasedZoomAnchor} />;
 
 export const zoomAnchorToBounds = () => <Interaction zoomAnchor={rightDomainBasedZoomAnchor} />;
-

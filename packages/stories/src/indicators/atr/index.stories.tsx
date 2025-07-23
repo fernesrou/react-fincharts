@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import { atr } from "@react-fincharts/charts";
 import ATRIndicator from "./AtrIndicator";
 
@@ -11,4 +11,3 @@ export default {
 };
 
 export const basic = () => <ATRIndicator />;
-

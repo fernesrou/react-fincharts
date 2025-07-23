@@ -23,4 +23,3 @@ export default {
 const Template: Story<YAxisProps> = (args) => <AxisExample {...args} />;
 
 export const yAxis = Template.bind({});
-

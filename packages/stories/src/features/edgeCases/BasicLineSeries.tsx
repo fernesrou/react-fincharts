@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import {
     Chart,
     ChartCanvas,
@@ -61,4 +61,3 @@ class BasicLineSeries extends React.Component<ChartProps> {
 }
 
 export default withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicLineSeries));
-

@@ -6,4 +6,3 @@ export default {
 };
 
 export const basic = () => <CompareIndicator />;
-

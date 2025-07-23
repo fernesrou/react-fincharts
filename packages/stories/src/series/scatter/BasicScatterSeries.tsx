@@ -1,11 +1,17 @@
-import { max } from "d3-array";
+﻿import { max } from "d3-array";
 import { scaleLinear } from "d3-scale";
 import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { ScatterSeries, CircleMarker } from "@react-fincharts/charts";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    discontinuousTimeScaleProviderBuilder,
+    ScatterSeries,
+    CircleMarker,
+    withDeviceRatio,
+    withSize,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps {
@@ -68,4 +74,3 @@ class BasicScatterSeries extends React.Component<ChartProps> {
 }
 
 export default withOHLCData("MINUTES")(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicScatterSeries)));
-

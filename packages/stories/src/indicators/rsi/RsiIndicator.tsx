@@ -1,10 +1,14 @@
-import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { rsi } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { RSISeries } from "@react-fincharts/charts";
-import { RSITooltip } from "@react-fincharts/charts";
+﻿import * as React from "react";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    rsi,
+    discontinuousTimeScaleProviderBuilder,
+    RSISeries,
+    RSITooltip,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
@@ -68,4 +72,3 @@ class RSIIndicator extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(RSIIndicator)));
-

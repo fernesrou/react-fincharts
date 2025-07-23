@@ -10,4 +10,3 @@ export default {
 export const daily = () => <Daily />;
 
 export const intraday = () => <Intraday />;
-

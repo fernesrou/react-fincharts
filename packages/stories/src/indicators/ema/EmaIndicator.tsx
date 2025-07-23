@@ -1,10 +1,14 @@
-import * as React from "react";
-import { Chart, ChartCanvas } from "@react-fincharts/charts";
-import { XAxis, YAxis } from "@react-fincharts/charts";
-import { ema } from "@react-fincharts/charts";
-import { discontinuousTimeScaleProviderBuilder } from "@react-fincharts/charts";
-import { LineSeries } from "@react-fincharts/charts";
-import { MovingAverageTooltip } from "@react-fincharts/charts";
+﻿import * as React from "react";
+import {
+    Chart,
+    ChartCanvas,
+    XAxis,
+    YAxis,
+    ema,
+    discontinuousTimeScaleProviderBuilder,
+    LineSeries,
+    MovingAverageTooltip,
+} from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
 import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 

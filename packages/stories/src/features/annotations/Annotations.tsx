@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import {
     ema,
     discontinuousTimeScaleProviderBuilder,
@@ -80,4 +80,3 @@ class Annotations extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Annotations)));
-

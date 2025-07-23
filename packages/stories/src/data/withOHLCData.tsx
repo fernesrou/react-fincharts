@@ -73,4 +73,3 @@ export function withOHLCData(dataSet = "DAILY") {
         };
     };
 }
-

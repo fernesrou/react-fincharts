@@ -6,4 +6,3 @@ export default {
 };
 
 export const continuous = () => <Updating />;
-

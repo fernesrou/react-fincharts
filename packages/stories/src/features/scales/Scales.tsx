@@ -1,4 +1,4 @@
-import { format } from "d3-format";
+﻿import { format } from "d3-format";
 import { scaleTime, ScaleTime, ScaleContinuousNumeric } from "d3-scale";
 import * as React from "react";
 import {
@@ -60,4 +60,3 @@ class Scales extends React.Component<ChartProps> {
 }
 
 export const Daily = withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Scales)));
-

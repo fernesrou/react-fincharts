@@ -1,4 +1,4 @@
-import { format } from "d3-format";
+﻿import { format } from "d3-format";
 import { timeFormat } from "d3-time-format";
 import * as React from "react";
 import {
@@ -138,4 +138,3 @@ class CompareIndicator extends React.Component<ChartProps> {
 }
 
 export default withOHLCData("comparison")(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(CompareIndicator)));
-

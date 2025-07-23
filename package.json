@@ -102,6 +102,7 @@
         "@react-fincharts/stories": "file:packages/stories",
         "@react-fincharts/tooltip": "file:packages/tooltip",
         "@react-fincharts/utils": "file:packages/utils",
+        "glob": "^11.0.3",
         "react-fincharts": "file:packages/charts"
     }
 }

@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import { MouseCoordinateY } from "@react-fincharts/charts";
 import Coordinates from "./Coordinates";
 
@@ -10,4 +10,3 @@ export default {
 export const edge = () => <Coordinates />;
 
 export const arrows = () => <Coordinates arrowWidth={10} />;
-

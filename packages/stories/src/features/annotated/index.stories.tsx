@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 import { Annotate } from "@react-fincharts/charts";
 import Annotated from "./Annotated";
 
@@ -10,4 +10,3 @@ export default {
 export const labels = () => <Annotated labelAnnotation />;
 
 export const paths = () => <Annotated svgAnnotation />;
-

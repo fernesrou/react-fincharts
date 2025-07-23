@@ -1,4 +1,4 @@
-import { format } from "d3-format";
+﻿import { format } from "d3-format";
 import * as React from "react";
 import {
     change,
@@ -75,4 +75,3 @@ export class ElderRayIndicatorChart extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(ElderRayIndicatorChart)));
-

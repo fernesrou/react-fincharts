@@ -1,4 +1,4 @@
-import { scaleTime } from "d3-scale";
+﻿import { scaleTime } from "d3-scale";
 import * as React from "react";
 import {
     CandlestickSeries,
@@ -93,4 +93,3 @@ class BasicLineSeries extends React.Component<ChartProps> {
 export const Updating = withOHLCData("SECONDS")(
     withUpdatingData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicLineSeries))),
 );
-

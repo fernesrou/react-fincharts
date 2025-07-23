@@ -19,4 +19,3 @@ export default {
 const Template: Story<LabelProps> = (args) => <Annotations {...args} />;
 
 export const background = Template.bind({});
-
