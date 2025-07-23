@@ -3,7 +3,7 @@ import {
     lastVisibleItemBasedZoomAnchor,
     mouseBasedZoomAnchor,
     rightDomainBasedZoomAnchor,
-} from "@react-financial-charts/core";
+} from "react-fincharts";
 import { ChartCanvas } from "../../../../core/src/ChartCanvas";
 import Interaction from "./Interaction";
 
@@ -25,3 +25,4 @@ export const zoomAnchorToMouse = () => <Interaction zoomAnchor={mouseBasedZoomAn
 export const zoomAnchorToLastVisible = () => <Interaction zoomAnchor={lastVisibleItemBasedZoomAnchor} />;
 
 export const zoomAnchorToBounds = () => <Interaction zoomAnchor={rightDomainBasedZoomAnchor} />;
+

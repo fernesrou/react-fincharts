@@ -9,7 +9,7 @@ import {
     YAxisProps,
     withDeviceRatio,
     withSize,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps extends Partial<YAxisProps> {
@@ -68,3 +68,4 @@ class AxisExample extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(AxisExample)));
+

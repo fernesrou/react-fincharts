@@ -52,3 +52,4 @@ export function withUpdatingData(initialLength = 120, interval = 1_000) {
         };
     };
 }
+

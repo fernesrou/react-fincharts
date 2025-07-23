@@ -66,3 +66,4 @@ export const emptyThenThreeAsync = () => {
     }, []);
     return <BasicLineSeries data={data} />;
 };
+

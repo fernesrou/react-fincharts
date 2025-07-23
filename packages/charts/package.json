@@ -1,52 +1,54 @@
 {
-    "name": "react-financial-charts",
-    "version": "2.0.1",
-    "description": "React charts specific to finance.",
-    "main": "./lib/index.js",
-    "typings": "./lib/index.d.ts",
-    "files": [
-        "lib",
-        "src"
-    ],
-    "sideEffects": false,
-    "author": "reactivemarkets",
-    "keywords": [
-        "charts",
-        "charting",
-        "stockcharts",
-        "finance",
-        "financial",
-        "finance-chart",
-        "react",
-        "d3"
-    ],
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/reactivemarkets/react-financial-charts.git"
-    },
-    "bugs": {
-        "url": "https://github.com/reactivemarkets/react-financial-charts/issues"
-    },
-    "scripts": {
-        "build": "npm run clean && npm run compile",
-        "clean": "rimraf lib",
-        "compile": "tsc -p tsconfig.json"
-    },
-    "dependencies": {
-        "@react-financial-charts/annotations": "file:../annotations",
-        "@react-financial-charts/axes": "file:../axes",
-        "@react-financial-charts/coordinates": "file:../coordinates",
-        "@react-financial-charts/core": "file:../core",
-        "@react-financial-charts/indicators": "file:../indicators",
-        "@react-financial-charts/interactive": "file:../interactive",
-        "@react-financial-charts/scales": "file:../scales",
-        "@react-financial-charts/series": "file:../series",
-        "@react-financial-charts/tooltip": "file:../tooltip",
-        "@react-financial-charts/utils": "file:../utils"
-    },
-    "peerDependencies": {
-        "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
-        "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
-    }
+    "name":  "react-fincharts",
+    "version":  "1.0.0",
+    "description":  "React charts specific to finance - Modernized for React 18/19.",
+    "main":  "./lib/index.js",
+    "typings":  "./lib/index.d.ts",
+    "files":  [
+                  "lib",
+                  "README.md",
+                  "CHANGELOG.md",
+                  "LICENSE"
+              ],
+    "sideEffects":  false,
+    "author":  "reactivemarkets",
+    "keywords":  [
+                     "charts",
+                     "charting",
+                     "stockcharts",
+                     "finance",
+                     "financial",
+                     "finance-chart",
+                     "react",
+                     "d3"
+                 ],
+    "license":  "MIT",
+    "repository":  {
+                       "type":  "git",
+                       "url":  "https://github.com/fernesrou/react-fincharts.git"
+                   },
+    "bugs":  {
+                 "url":  "https://github.com/fernesrou/react-fincharts/issues"
+             },
+    "scripts":  {
+                    "build":  "npm run clean \u0026\u0026 npm run compile",
+                    "clean":  "rimraf lib",
+                    "compile":  "tsc -p tsconfig.json"
+                },
+    "dependencies":  {
+                         "@react-fincharts/annotations":  "file:../annotations",
+                         "@react-fincharts/axes":  "file:../axes",
+                         "@react-fincharts/coordinates":  "file:../coordinates",
+                         "@react-fincharts/core":  "file:../core",
+                         "@react-fincharts/indicators":  "file:../indicators",
+                         "@react-fincharts/interactive":  "file:../interactive",
+                         "@react-fincharts/scales":  "file:../scales",
+                         "@react-fincharts/series":  "file:../series",
+                         "@react-fincharts/tooltip":  "file:../tooltip",
+                         "@react-fincharts/utils":  "file:../utils"
+                     },
+    "peerDependencies":  {
+                             "react":  "^17.0.0 || ^18.0.0 || ^19.0.0",
+                             "react-dom":  "^17.0.0 || ^18.0.0 || ^19.0.0"
+                         }
 }

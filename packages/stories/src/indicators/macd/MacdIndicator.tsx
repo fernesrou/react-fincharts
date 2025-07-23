@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Chart, ChartCanvas } from "@react-financial-charts/core";
-import { XAxis, YAxis } from "@react-financial-charts/axes";
-import { macd } from "@react-financial-charts/indicators";
-import { discontinuousTimeScaleProviderBuilder } from "@react-financial-charts/scales";
-import { MACDSeries } from "@react-financial-charts/series";
-import { MACDTooltip } from "@react-financial-charts/tooltip";
+import { Chart, ChartCanvas } from "react-fincharts";
+import { XAxis, YAxis } from "react-fincharts";
+import { macd } from "react-fincharts";
+import { discontinuousTimeScaleProviderBuilder } from "react-fincharts";
+import { MACDSeries } from "react-fincharts";
+import { MACDTooltip } from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-financial-charts/utils";
+import { withDeviceRatio, withSize } from "react-fincharts";
 
 interface ChartProps {
     readonly data: IOHLCData[];
@@ -88,3 +88,4 @@ class MACDIndicator extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(MACDIndicator)));
+

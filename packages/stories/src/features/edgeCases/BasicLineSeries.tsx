@@ -8,7 +8,7 @@ import {
     LineSeries,
     withDeviceRatio,
     withSize,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData } from "../../data";
 
 interface ChartProps {
@@ -61,3 +61,4 @@ class BasicLineSeries extends React.Component<ChartProps> {
 }
 
 export default withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicLineSeries));
+

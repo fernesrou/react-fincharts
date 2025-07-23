@@ -1,4 +1,4 @@
-import { ChartContext, last } from "@react-financial-charts/core";
+import { ChartContext, last } from "@react-fincharts/core";
 import { interpolateNumber } from "d3-interpolate";
 import * as React from "react";
 

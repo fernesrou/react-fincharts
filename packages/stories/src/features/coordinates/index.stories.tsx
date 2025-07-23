@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MouseCoordinateY } from "@react-financial-charts/coordinates";
+import { MouseCoordinateY } from "react-fincharts";
 import Coordinates from "./Coordinates";
 
 export default {
@@ -10,3 +10,4 @@ export default {
 export const edge = () => <Coordinates />;
 
 export const arrows = () => <Coordinates arrowWidth={10} />;
+

@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Chart, ChartCanvas } from "@react-financial-charts/core";
-import { XAxis, YAxis } from "@react-financial-charts/axes";
-import { discontinuousTimeScaleProviderBuilder } from "@react-financial-charts/scales";
-import { BarSeries, CandlestickSeries, VolumeProfileSeries } from "@react-financial-charts/series";
+import { Chart, ChartCanvas } from "react-fincharts";
+import { XAxis, YAxis } from "react-fincharts";
+import { discontinuousTimeScaleProviderBuilder } from "react-fincharts";
+import { BarSeries, CandlestickSeries, VolumeProfileSeries } from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-financial-charts/utils";
-import { change } from "@react-financial-charts/indicators";
+import { withDeviceRatio, withSize } from "react-fincharts";
+import { change } from "react-fincharts";
 
 interface ChartProps {
     readonly data: IOHLCData[];
@@ -74,3 +74,4 @@ class VolumeProfile extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(VolumeProfile)));
+

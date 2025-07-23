@@ -10,7 +10,7 @@ import {
     timeFormat,
     withDeviceRatio,
     withSize,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps {
@@ -60,3 +60,4 @@ class Scales extends React.Component<ChartProps> {
 }
 
 export const Daily = withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Scales)));
+

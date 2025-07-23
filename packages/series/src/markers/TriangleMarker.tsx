@@ -1,5 +1,5 @@
 import * as React from "react";
-import { functor } from "@react-financial-charts/core";
+import { functor } from "@react-fincharts/core";
 
 export interface TriangleProps {
     readonly className?: string;

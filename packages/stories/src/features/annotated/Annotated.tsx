@@ -12,7 +12,7 @@ import {
     YAxis,
     withDeviceRatio,
     withSize,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps {
@@ -101,3 +101,4 @@ class Annotated extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Annotated)));
+

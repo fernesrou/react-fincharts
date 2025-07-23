@@ -18,3 +18,4 @@ type Story = StoryObj<typeof BollingerSeries>;
 export const basic: Story = {
     render: ({ fillStyle }) => <BollingerIndicator fillStyle={fillStyle} />,
 };
+

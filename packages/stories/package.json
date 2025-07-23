@@ -1,25 +1,25 @@
 {
-    "name": "@react-financial-charts/stories",
-    "version": "2.0.1",
-    "description": "Stories for react financial charts",
-    "private": true,
-    "author": "Reactive Markets",
-    "license": "MIT",
-    "scripts": {
-        "clean": "rimraf ../docs lib",
-        "docs": "storybook build -o ../../docs",
-        "start": "storybook dev -p 4444"
-    },
-    "dependencies": {
-        "d3-dsv": "^3.0.1",
-        "d3-format": "^3.1.0",
-        "d3-time-format": "^4.1.0",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-financial-charts": "file:../charts"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-react": "^4.2.1",
-        "vite": "^5.2.0"
-    }
+    "name":  "@react-fincharts/stories",
+    "version":  "1.0.0",
+    "description":  "Stories for react fincharts",
+    "private":  true,
+    "author":  "Fermín Roulet",
+    "license":  "MIT",
+    "scripts":  {
+                    "clean":  "rimraf ../docs lib",
+                    "docs":  "storybook build -o ../../docs",
+                    "start":  "storybook dev -p 4444"
+                },
+    "dependencies":  {
+                         "d3-dsv":  "^3.0.1",
+                         "d3-format":  "^3.1.0",
+                         "d3-time-format":  "^4.1.0",
+                         "react":  "^18.3.1",
+                         "react-dom":  "^18.3.1",
+                         "react-fincharts":  "file:../charts"
+                     },
+    "devDependencies":  {
+                            "@vitejs/plugin-react":  "^4.2.1",
+                            "vite":  "^5.2.0"
+                        }
 }

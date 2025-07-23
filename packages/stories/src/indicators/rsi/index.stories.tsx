@@ -8,3 +8,4 @@ export default {
 };
 
 export const basic = () => <RSIIndicator />;
+

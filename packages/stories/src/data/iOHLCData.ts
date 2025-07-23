@@ -6,3 +6,4 @@ export interface IOHLCData {
     readonly open: number;
     readonly volume: number;
 }
+

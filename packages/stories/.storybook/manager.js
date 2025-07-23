@@ -4,7 +4,7 @@ import { create } from "@storybook/theming";
 addons.setConfig({
     theme: create({
         base: "light",
-        brandTitle: "React Financial Charts",
-        brandUrl: "https://github.com/reactivemarkets/react-financial-charts",
+        brandTitle: "React Fincharts",
+        brandUrl: "https://github.com/fernesrou/react-fincharts",
     }),
 });

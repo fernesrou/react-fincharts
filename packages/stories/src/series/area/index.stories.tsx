@@ -22,3 +22,4 @@ export const daily: Story = {
 export const intraday: Story = {
     render: (args) => <Intraday {...args} />,
 };
+

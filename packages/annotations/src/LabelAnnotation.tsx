@@ -1,4 +1,4 @@
-import { functor } from "@react-financial-charts/core";
+import { functor } from "@react-fincharts/core";
 import { ScaleContinuousNumeric } from "d3-scale";
 import * as React from "react";
 

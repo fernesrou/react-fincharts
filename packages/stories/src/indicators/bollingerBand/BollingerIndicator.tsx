@@ -12,7 +12,7 @@ import {
     YAxis,
     withDeviceRatio,
     withSize,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps extends Pick<BollingerSeriesProps, "fillStyle"> {
@@ -77,3 +77,4 @@ class BollingerIndicator extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BollingerIndicator)));
+

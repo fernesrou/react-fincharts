@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Chart, ChartCanvas } from "@react-financial-charts/core";
-import { XAxis, YAxis } from "@react-financial-charts/axes";
-import { renko } from "@react-financial-charts/indicators";
-import { discontinuousTimeScaleProviderBuilder } from "@react-financial-charts/scales";
-import { RenkoSeries } from "@react-financial-charts/series";
+import { Chart, ChartCanvas } from "react-fincharts";
+import { XAxis, YAxis } from "react-fincharts";
+import { renko } from "react-fincharts";
+import { discontinuousTimeScaleProviderBuilder } from "react-fincharts";
+import { RenkoSeries } from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-financial-charts/utils";
+import { withDeviceRatio, withSize } from "react-fincharts";
 
 interface ChartProps {
     readonly data: IOHLCData[];
@@ -65,3 +65,4 @@ export const Daily = withOHLCData()(withSize({ style: { minHeight: 600 } })(with
 export const Intraday = withOHLCData("MINUTES")(
     withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicRenkoSeries)),
 );
+

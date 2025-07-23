@@ -9,7 +9,7 @@ import {
     withDeviceRatio,
     withSize,
     IZoomAnchorOptions,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../../data";
 
 interface ChartProps {
@@ -84,3 +84,4 @@ class Interaction extends React.Component<ChartProps> {
 }
 
 export default withOHLCData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(Interaction)));
+

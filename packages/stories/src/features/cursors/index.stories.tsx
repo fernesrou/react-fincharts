@@ -23,3 +23,4 @@ export const cursor: Story = {
 export const crosshair: Story = {
     render: () => <Cursors crosshair />,
 };
+

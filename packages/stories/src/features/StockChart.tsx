@@ -25,7 +25,7 @@ import {
     ZoomButtons,
     withDeviceRatio,
     withSize,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withOHLCData } from "../data";
 
 interface StockChartProps {

@@ -11,3 +11,4 @@ export const continuousScale = () => <Daily />;
 export const utcScale = () => <Daily xScale={scaleUtc()} />;
 
 export const logScale = () => <Daily yScale={scaleLog()} />;
+

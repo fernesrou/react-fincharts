@@ -10,7 +10,7 @@ import {
     withSize,
     XAxis,
     YAxis,
-} from "react-financial-charts";
+} from "react-fincharts";
 import { IOHLCData, withUpdatingData, withOHLCData } from "../../data";
 
 interface ChartProps {
@@ -93,3 +93,4 @@ class BasicLineSeries extends React.Component<ChartProps> {
 export const Updating = withOHLCData("SECONDS")(
     withUpdatingData()(withSize({ style: { minHeight: 600 } })(withDeviceRatio()(BasicLineSeries))),
 );
+
