@@ -1,12 +1,11 @@
-# React Financial Charts
+# React FinCharts
 
-> **Note:** this repo is a fork of [react-stockcharts](https://github.com/rrag/react-stockcharts), renamed, converted to typescript and bug fixes applied due to the original project being unmaintained.
+> **Note:** This repo is a fork of [react-financial-charts](https://github.com/react-financial/react-financial-charts), which itself is a fork of [react-stockcharts](https://github.com/rrag/react-stockcharts). This fork has been modernized for React 18/19 compatibility with bug fixes and performance improvements.
 
-> **Note:** v1 is a fully breaking change with large parts, if not all, rewritten. Do not expect the same API! although the same features should exist.
+> **Breaking Changes:** This is version 1.0.0 of react-fincharts with significant improvements over the original libraries. All packages have been renamed from `@react-financial-charts/*` to `@react-fincharts/*`.
 
-![ci](https://github.com/react-financial/react-financial-charts/workflows/ci/badge.svg)
-[![codecov](https://codecov.io/gh/reactivemarkets/react-financial-charts/branch/master/graph/badge.svg)](https://codecov.io/gh/reactivemarkets/react-financial-charts)
-[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/react-financial/react-financial-charts/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react-financial-charts.svg?style=flat)](https://www.npmjs.com/package/react-financial-charts)
+![ci](https://github.com/fernesrou/react-fincharts/workflows/ci/badge.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/fernesrou/react-fincharts/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/react-fincharts.svg?style=flat)](https://www.npmjs.com/package/react-fincharts)
 
 Charts dedicated to finance.
 
@@ -19,6 +18,35 @@ This library is compatible with:
 - **React 17.x, 18.x, and 19.x**
 - **TypeScript 5.x**
 - **Node.js 18+**
+
+## What's New in React FinCharts 1.0.0
+
+### 🚀 **Major Improvements**
+- **React 18/19 Compatibility**: Full support for React 18 and 19 with modern lifecycle methods
+- **Package Rename**: All packages renamed from `@react-financial-charts/*` to `@react-fincharts/*`
+- **Bug Fixes**: Fixed tooltip rendering, annotation synchronization, and zoom/pan coordination issues
+- **Performance**: Enhanced rendering performance and reduced re-renders
+- **TypeScript**: Better TypeScript support and type definitions
+- **Clean Architecture**: Removed deprecated UNSAFE lifecycle methods
+
+### 🔧 **Breaking Changes**
+- Package names changed to `@react-fincharts/*`
+- Main package renamed to `react-fincharts`
+- Some API improvements for better React 18+ compatibility
+
+### 📦 **Migration Guide**
+Replace your imports:
+```javascript
+// Old
+import { ChartCanvas } from 'react-financial-charts';
+import { CandlestickSeries } from '@react-financial-charts/series';
+
+// New
+import { ChartCanvas } from 'react-fincharts';
+import { CandlestickSeries } from '@react-fincharts/series';
+```
+
+---
 
 ## Features
 
@@ -64,12 +92,20 @@ This library is compatible with:
 ## Installation
 
 ```sh
-npm install react-financial-charts
+npm install react-fincharts
+```
+
+For specific packages:
+
+```sh
+npm install @react-fincharts/core @react-fincharts/series @react-fincharts/annotations
 ```
 
 ## Documentation
 
-[Stories](https://react-financial.github.io/react-financial-charts/)
+[Stories/Examples](https://fernesrou.github.io/react-fincharts/) (Coming soon)
+
+For now, refer to the original [react-financial-charts documentation](https://react-financial.github.io/react-financial-charts/) as the API is largely compatible.
 
 ## Contributing
 
@@ -80,8 +116,8 @@ This project is a mono-repo that uses [Lerna](https://lerna.js.org/) to manage d
 To get started run:
 
 ```bash
-git clone https://github.com/react-financial/react-financial-charts.git
-cd react-financial-charts
+git clone https://github.com/fernesrou/react-fincharts.git
+cd react-fincharts
 npm ci
 npm run build
 ```
@@ -94,27 +130,37 @@ npm start
 
 ## Roadmap
 
-- [x] Convert to typescript
-- [x] Bump dependencies to latest
-- [x] Remove React 16 support (modernized to React 17+)
-- [x] Add CI
-- [x] Fix passive scrolling issues
-- [x] Implement PRs from react-stockcharts
-- [x] Add all typings
-- [x] Move examples to storybook
-- [x] Add all series' to storybook
-- [x] Split project into multiple packages
-- [x] Fix issues with empty datasets
-- [x] Correct all class props
-- [x] Migrate to new React Context API
-- [x] Remove all UNSAFE methods
+### ✅ **Completed (react-fincharts 1.0.0)**
+- [x] Fork and modernize from react-financial-charts
 - [x] Add React 18 & 19 compatibility
-- [x] Update to modern JSX transform
-- [x] Upgrade to Storybook 8.x
-- [x] Upgrade TypeScript to 5.x
-- [ ] Add documentation to storybook
-- [ ] Add full test suite
+- [x] Remove all UNSAFE lifecycle methods
+- [x] Fix tooltip rendering and positioning issues
+- [x] Fix annotation zoom/pan coordination
+- [x] Enhanced error handling and prop validation
+- [x] Rename packages to @react-fincharts/*
+- [x] Update all documentation and examples
+- [x] Optimize build process and package size
 
-## LICENSE
+### 🚧 **In Progress**
+- [ ] Publish to npm registry
+- [ ] Set up GitHub Pages for documentation
+- [ ] Create comprehensive migration guide
 
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B13613%2Fgit%40github.com%3Areactivemarkets%2Freact-financial-charts.git.svg?type=large)](https://app.fossa.com/projects/custom%2B13613%2Fgit%40github.com%3Areactivemarkets%2Freact-financial-charts.git?ref=badge_large)
+### 📋 **Future Plans**
+- [ ] Add full test suite with Jest/React Testing Library
+- [ ] Performance optimizations for large datasets
+- [ ] Add more chart types and indicators
+- [ ] Accessibility improvements
+- [ ] Mobile touch gesture improvements
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Attribution
+
+This project is a fork of:
+- [react-financial-charts](https://github.com/react-financial/react-financial-charts) (by Reactive Markets)
+- [react-stockcharts](https://github.com/rrag/react-stockcharts) (original project by rrag)
+
+Special thanks to all the original contributors who made this library possible.
