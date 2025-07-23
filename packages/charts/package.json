@@ -1,5 +1,5 @@
 {
-    "name": "react-fincharts",
+    "name": "@react-fincharts/charts",
     "version": "1.0.0",
     "description": "React charts specific to finance - Modernized for React 18/19.",
     "main": "./lib/index.js",
@@ -51,5 +51,5 @@
         "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
         "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
     },
-    "gitHead": "0fdde2cd8fdab388894f1ae961c38bf78288743a"
+    "gitHead": "65872fe313fd4e5910e619a8be7491f69dc6f3b7"
 }
