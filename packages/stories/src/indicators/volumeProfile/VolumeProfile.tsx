@@ -8,9 +8,11 @@ import {
     BarSeries,
     CandlestickSeries,
     VolumeProfileSeries,
+    withDeviceRatio,
+    withSize,
+    change,
 } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize, change } from "@react-fincharts/charts";
 
 interface ChartProps {
     readonly data: IOHLCData[];

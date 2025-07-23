@@ -7,9 +7,10 @@ import {
     pointAndFigure,
     discontinuousTimeScaleProviderBuilder,
     PointAndFigureSeries,
+    withDeviceRatio,
+    withSize,
 } from "@react-fincharts/charts";
 import { IOHLCData, withOHLCData } from "../../data";
-import { withDeviceRatio, withSize } from "@react-fincharts/charts";
 
 interface ChartProps {
     readonly data: IOHLCData[];
