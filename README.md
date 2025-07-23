@@ -148,7 +148,7 @@ npm start
 
 ### 🚧 **In Progress**
 
-- [x] Publish to npm registry (✅ Published as @react-fincharts/*)
+- [x] Publish to npm registry (✅ Published as @react-fincharts/\*)
 - [ ] Set up GitHub Pages for documentation
 - [ ] Create comprehensive migration guide
 
