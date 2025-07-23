@@ -5,7 +5,7 @@
 > **Breaking Changes:** This is version 1.0.0 of react-fincharts with significant improvements over the original libraries. All packages have been renamed from `@react-financial-charts/*` to `@react-fincharts/*`.
 
 ![ci](https://github.com/fernesrou/react-fincharts/workflows/ci/badge.svg)
-[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/fernesrou/react-fincharts/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/react-fincharts.svg?style=flat)](https://www.npmjs.com/package/react-fincharts)
+[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/fernesrou/react-fincharts/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@react-fincharts/charts.svg?style=flat)](https://www.npmjs.com/package/@react-fincharts/charts)
 
 Charts dedicated to finance.
 
@@ -33,7 +33,7 @@ This library is compatible with:
 ### 🔧 **Breaking Changes**
 
 - Package names changed to `@react-fincharts/*`
-- Main package renamed to `react-fincharts`
+- Main package renamed to `@react-fincharts/charts`
 - Some API improvements for better React 18+ compatibility
 
 ### 📦 **Migration Guide**
@@ -46,7 +46,7 @@ import { ChartCanvas } from "react-financial-charts";
 import { CandlestickSeries } from "@react-financial-charts/series";
 
 // New
-import { ChartCanvas } from "react-fincharts";
+import { ChartCanvas } from "@react-fincharts/charts";
 import { CandlestickSeries } from "@react-fincharts/series";
 ```
 
@@ -96,7 +96,7 @@ import { CandlestickSeries } from "@react-fincharts/series";
 ## Installation
 
 ```sh
-npm install react-fincharts
+npm install @react-fincharts/charts
 ```
 
 For specific packages:
@@ -148,7 +148,7 @@ npm start
 
 ### 🚧 **In Progress**
 
-- [ ] Publish to npm registry
+- [x] Publish to npm registry (✅ Published as @react-fincharts/*)
 - [ ] Set up GitHub Pages for documentation
 - [ ] Create comprehensive migration guide
 
