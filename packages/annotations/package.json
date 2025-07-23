@@ -47,5 +47,5 @@
         "@react-fincharts/core": "^1.0.0",
         "@types/d3-scale": "^3.2.2"
     },
-    "gitHead": "0fdde2cd8fdab388894f1ae961c38bf78288743a"
+    "gitHead": "65872fe313fd4e5910e619a8be7491f69dc6f3b7"
 }
