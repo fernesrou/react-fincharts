@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/fernesrou/react-fincharts/compare/v1.0.2...v1.0.3) (2025-07-24)
+
+### Bug Fixes
+
+- Add originalXExtents to ChartCanvasContext to enable proper zoom reset functionality
+- Preserve initial xExtents in component state to support ZoomButtons reset behavior
+
 ## [1.0.2](https://github.com/fernesrou/react-fincharts/compare/v1.0.1...v1.0.2) (2025-07-24)
 
 ### Bug Fixes

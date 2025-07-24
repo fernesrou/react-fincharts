@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/core",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Core code for react-fincharts",
     "publishConfig": {
         "access": "public"
