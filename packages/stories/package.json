@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/stories",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Stories for react fincharts",
     "private": true,
     "author": "Fermín Roulet",

@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/coordinates",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Coordinates for react-fincharts",
     "publishConfig": {
         "access": "public"
@@ -40,7 +40,7 @@
         "watch": "tsc -p tsconfig.json --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "@react-fincharts/core": "^1.0.0",
+        "@react-fincharts/core": "^1.0.1",
         "d3-format": "^2.0.0"
     },
     "peerDependencies": {

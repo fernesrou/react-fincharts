@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/fernesrou/react-fincharts/compare/v2.0.1...v1.0.1) (2025-07-24)
+
+
+### Bug Fixes
+
+* Correct package name for charts to use [@react-fincharts](https://github.com/react-fincharts) scope ([5168ac4](https://github.com/fernesrou/react-fincharts/commit/5168ac4d4e6b341035960332e12eb0e01b10cbc5))
+
+
+
+
+
+
 # [1.0.0](https://github.com/ferminroulet/react-fincharts) (2025-01-05)
 
 ### BREAKING CHANGES

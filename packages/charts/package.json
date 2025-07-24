@@ -39,16 +39,16 @@
         "compile": "tsc -p tsconfig.json"
     },
     "dependencies": {
-        "@react-fincharts/annotations": "^1.0.0",
-        "@react-fincharts/axes": "^1.0.0",
-        "@react-fincharts/coordinates": "^1.0.0",
-        "@react-fincharts/core": "^1.0.0",
-        "@react-fincharts/indicators": "^1.0.0",
-        "@react-fincharts/interactive": "^1.0.0",
-        "@react-fincharts/scales": "^1.0.0",
-        "@react-fincharts/series": "^1.0.0",
-        "@react-fincharts/tooltip": "^1.0.0",
-        "@react-fincharts/utils": "^1.0.0"
+        "@react-fincharts/annotations": "^1.0.1",
+        "@react-fincharts/axes": "^1.0.1",
+        "@react-fincharts/coordinates": "^1.0.1",
+        "@react-fincharts/core": "^1.0.1",
+        "@react-fincharts/indicators": "^1.0.1",
+        "@react-fincharts/interactive": "^1.0.1",
+        "@react-fincharts/scales": "^1.0.1",
+        "@react-fincharts/series": "^1.0.1",
+        "@react-fincharts/tooltip": "^1.0.1",
+        "@react-fincharts/utils": "^1.0.1"
     },
     "peerDependencies": {
         "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
