@@ -15,11 +15,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @react-fincharts/interactive
 
-
-
-
-
-
 # [1.0.0](https://github.com/ferminroulet/react-fincharts) (2025-01-05)
 
 ### BREAKING CHANGES
