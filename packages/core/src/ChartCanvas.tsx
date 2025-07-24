@@ -92,6 +92,7 @@ export interface ChartCanvasContextType<TXAxis extends number | Date> {
     subscribe: (id: string | number, rest: any) => void;
     unsubscribe: (id: string | number) => void;
     setCursorClass: (className: string | null | undefined) => void;
+    originalXExtents?: [TXAxis, TXAxis];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -167,7 +168,7 @@ const calculateFullData = <TXAxis extends number | Date>(props: ChartCanvasProps
 const resetChart = <TXAxis extends number | Date>(props: ChartCanvasProps<TXAxis>) => {
     const state = calculateState(props);
 
-    const { xAccessor, displayXAccessor, fullData, plotData: initialPlotData, xScale } = state;
+    const { xAccessor, displayXAccessor, fullData, plotData: initialPlotData, xScale, originalXExtents } = state;
 
     const { postCalculator, children } = props;
 
@@ -186,6 +187,7 @@ const resetChart = <TXAxis extends number | Date>(props: ChartCanvasProps<TXAxis
         xScale,
         plotData,
         chartConfigs,
+        originalXExtents,
     };
 };
 
@@ -287,6 +289,7 @@ const calculateState = <TXAxis extends number | Date>(props: ChartCanvasProps<TX
         displayXAccessor,
         fullData,
         filterData,
+        originalXExtents: extent,
     };
 };
 
@@ -404,6 +407,7 @@ interface ChartCanvasState<TXAxis extends number | Date> {
     plotData: any[];
     xScale: ScaleContinuousNumeric<number, number> | ScaleTime<number, number>;
     fullData: any[];
+    originalXExtents?: [TXAxis, TXAxis];
 }
 
 interface Subscription {
@@ -1202,6 +1206,7 @@ export class ChartCanvas<TXAxis extends number | Date> extends React.Component<
             getMutableState: this.getMutableState,
             amIOnTop: this.amIOnTop,
             setCursorClass: this.setCursorClass,
+            originalXExtents: this.state.originalXExtents,
         };
     }
 

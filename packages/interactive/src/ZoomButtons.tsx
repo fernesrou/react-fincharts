@@ -1,4 +1,4 @@
-import { ChartContext, last } from "@react-fincharts/core";
+import { ChartCanvasContext, last } from "@react-fincharts/core";
 import { interpolateNumber } from "d3-interpolate";
 import * as React from "react";
 
@@ -26,17 +26,15 @@ export class ZoomButtons extends React.Component<ZoomButtonsProps> {
         zoomMultiplier: 1.5,
     };
 
-    public static contextType = ChartContext;
-    declare public context: React.ContextType<typeof ChartContext>;
+    public static contextType = ChartCanvasContext;
+    declare public context: React.ContextType<typeof ChartCanvasContext>;
 
     private interval?: number;
 
     public render() {
-        const { chartConfig } = this.context;
+        const { width, height } = this.context;
 
-        const { width, height } = chartConfig;
-
-        const { heightFromBase, r, fill, fillOpacity, onReset, stroke, strokeWidth, textFill } = this.props;
+        const { heightFromBase, r, fill, fillOpacity, stroke, strokeWidth, textFill } = this.props;
 
         const centerX = Math.round(width / 2);
         const y = height - heightFromBase;
@@ -107,7 +105,7 @@ export class ZoomButtons extends React.Component<ZoomButtonsProps> {
                 />
                 <circle
                     className="react-financial-charts-enable-interaction reset"
-                    onClick={onReset}
+                    onClick={this.handleReset}
                     cx={resetX - r / 2}
                     cy={y + r / 2}
                     r={r}
@@ -131,6 +129,29 @@ export class ZoomButtons extends React.Component<ZoomButtonsProps> {
         }
 
         this.zoom(1);
+    };
+
+    private readonly handleReset = () => {
+        const { onReset } = this.props;
+        const { xAxisZoom, plotData, xAccessor, originalXExtents } = this.context;
+
+        if (onReset) {
+            // Use external reset function if provided
+            onReset();
+        } else if (xAxisZoom && originalXExtents) {
+            // Use original xExtents if available
+            xAxisZoom(originalXExtents);
+        } else if (xAxisZoom && plotData && xAccessor) {
+            // Fallback: zoom to show all data
+            const firstItem = plotData[0];
+            const lastItem = last(plotData);
+            
+            if (firstItem && lastItem) {
+                const min = xAccessor(firstItem);
+                const max = xAccessor(lastItem);
+                xAxisZoom([min, max]);
+            }
+        }
     };
 
     private readonly zoom = (direction: number) => {
