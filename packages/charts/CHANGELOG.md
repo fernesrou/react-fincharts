@@ -3,25 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.2](https://github.com/fernesrou/react-fincharts/compare/v1.0.1...v1.0.2) (2025-07-24)
-
+## [1.0.3](https://github.com/fernesrou/react-fincharts/compare/v1.0.2...v1.0.3) (2025-07-24)
 
 ### Bug Fixes
 
-* Update dependencies to use latest versions (1.0.1) of all @react-fincharts packages ([e2b4be4](https://github.com/fernesrou/react-fincharts/commit/e2b4be434e3e939105ba0cfd4b86aa60ffbe89f1))
+- Update core dependency to 1.0.2 to include generateSubscriptionId fix
 
+## [1.0.2](https://github.com/fernesrou/react-fincharts/compare/v1.0.1...v1.0.2) (2025-07-24)
+
+### Bug Fixes
+
+- Update dependencies to use latest versions (1.0.1) of all @react-fincharts packages ([e2b4be4](https://github.com/fernesrou/react-fincharts/commit/e2b4be434e3e939105ba0cfd4b86aa60ffbe89f1))
 
 ## [1.0.1](https://github.com/fernesrou/react-fincharts/compare/v2.0.1...v1.0.1) (2025-07-24)
 
-
 ### Bug Fixes
 
-* Correct package name for charts to use [@react-fincharts](https://github.com/react-fincharts) scope ([5168ac4](https://github.com/fernesrou/react-fincharts/commit/5168ac4d4e6b341035960332e12eb0e01b10cbc5))
-
-
-
-
-
+- Correct package name for charts to use [@react-fincharts](https://github.com/react-fincharts) scope ([5168ac4](https://github.com/fernesrou/react-fincharts/commit/5168ac4d4e6b341035960332e12eb0e01b10cbc5))
 
 # [1.0.0](https://github.com/ferminroulet/react-fincharts) (2025-01-05)
 
