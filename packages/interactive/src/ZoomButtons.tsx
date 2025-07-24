@@ -145,7 +145,6 @@ export class ZoomButtons extends React.Component<ZoomButtonsProps> {
             // Fallback: zoom to show all data
             const firstItem = plotData[0];
             const lastItem = last(plotData);
-            
             if (firstItem && lastItem) {
                 const min = xAccessor(firstItem);
                 const max = xAccessor(lastItem);
