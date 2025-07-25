@@ -17,6 +17,7 @@ export interface GannFanProps {
     readonly onDragComplete?: (e: React.MouseEvent, moreProps: any) => void;
     readonly onHover?: (e: React.MouseEvent, moreProps: any) => void;
     readonly onUnHover?: (e: React.MouseEvent, moreProps: any) => void;
+    readonly onClickWhenHover?: (e: React.MouseEvent, moreProps: any) => void;
     readonly selected: boolean;
     readonly strokeStyle: string;
     readonly strokeWidth: number;
@@ -32,7 +33,7 @@ export class GannFan extends React.Component<GannFanProps> {
 
     public render() {
         const { selected, interactiveCursorClass } = this.props;
-        const { onDragStart, onDrag, onDragComplete, onHover, onUnHover } = this.props;
+        const { onDragStart, onDrag, onDragComplete, onHover, onUnHover, onClickWhenHover } = this.props;
 
         return (
             <GenericChartComponent
@@ -46,6 +47,7 @@ export class GannFan extends React.Component<GannFanProps> {
                 onDragComplete={onDragComplete}
                 onHover={onHover}
                 onUnHover={onUnHover}
+                onClickWhenHover={onClickWhenHover}
                 drawOn={["mousemove", "mouseleave", "pan", "drag"]}
             />
         );

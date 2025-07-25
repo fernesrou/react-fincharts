@@ -125,6 +125,7 @@ export class EquidistantChannel extends React.Component<EquidistantChannelProps,
                             appearance={eachAppearance}
                             onDrag={this.handleDragChannel}
                             onDragComplete={this.handleDragChannelComplete}
+                            onSelect={this.handleSelectChannel}
                         />
                     );
                 })}
@@ -153,6 +154,20 @@ export class EquidistantChannel extends React.Component<EquidistantChannelProps,
         });
     };
 
+    private readonly handleSelectChannel = (e: React.MouseEvent, index: number | undefined, moreProps: any) => {
+        const { channels } = this.props;
+
+        const newChannels = channels.map((each, idx) => ({
+            ...each,
+            selected: idx === index,
+        }));
+
+        const { onComplete } = this.props;
+        if (onComplete !== undefined) {
+            onComplete(e, newChannels, moreProps);
+        }
+    };
+
     private readonly handleDragChannelComplete = (e: React.MouseEvent, moreProps: any) => {
         const { override } = this.state;
         const { channels } = this.props;
@@ -160,7 +175,7 @@ export class EquidistantChannel extends React.Component<EquidistantChannelProps,
         if (isDefined(override)) {
             const { index, ...rest } = override;
             const newChannels = channels.map((each, idx) =>
-                idx === index ? { ...each, ...rest, selected: true } : each,
+                idx === index ? { ...each, ...rest, selected: true } : { ...each, selected: false },
             );
 
             this.setState(

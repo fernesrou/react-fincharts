@@ -19,6 +19,7 @@ export interface ChannelWithAreaProps {
     readonly onDragComplete?: (e: React.MouseEvent, moreProps: any) => void;
     readonly onHover?: (e: React.MouseEvent, moreProps: any) => void;
     readonly onUnHover?: (e: React.MouseEvent, moreProps: any) => void;
+    readonly onClickWhenHover?: (e: React.MouseEvent, moreProps: any) => void;
     readonly defaultClassName?: string;
     readonly tolerance: number;
     readonly selected: boolean;
@@ -34,7 +35,7 @@ export class ChannelWithArea extends React.Component<ChannelWithAreaProps> {
 
     public render() {
         const { selected, interactiveCursorClass } = this.props;
-        const { onDragStart, onDrag, onDragComplete, onHover, onUnHover } = this.props;
+        const { onDragStart, onDrag, onDragComplete, onHover, onUnHover, onClickWhenHover } = this.props;
 
         return (
             <GenericChartComponent
@@ -48,6 +49,7 @@ export class ChannelWithArea extends React.Component<ChannelWithAreaProps> {
                 onDragComplete={onDragComplete}
                 onHover={onHover}
                 onUnHover={onUnHover}
+                onClickWhenHover={onClickWhenHover}
                 drawOn={["mousemove", "mouseleave", "pan", "drag"]}
             />
         );

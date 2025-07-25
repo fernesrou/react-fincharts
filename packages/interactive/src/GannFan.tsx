@@ -124,6 +124,7 @@ export class GannFan extends React.Component<GannFanProps, GannFanState> {
                             hoverText={hoverText}
                             onDrag={this.handleDragFan}
                             onDragComplete={this.handleDragFanComplete}
+                            onSelect={this.handleSelectFan}
                         />
                     );
                 })}
@@ -210,7 +211,9 @@ export class GannFan extends React.Component<GannFanProps, GannFanState> {
 
         if (isDefined(override)) {
             const { index, ...rest } = override;
-            const newfans = fans.map((each, idx) => (idx === index ? { ...each, ...rest, selected: true } : each));
+            const newfans = fans.map((each, idx) =>
+                idx === index ? { ...each, ...rest, selected: true } : { ...each, selected: false },
+            );
             this.setState(
                 {
                     override: null,
@@ -229,5 +232,19 @@ export class GannFan extends React.Component<GannFanProps, GannFanState> {
                 ...newXYValue,
             },
         });
+    };
+
+    private readonly handleSelectFan = (e: React.MouseEvent, index: number | undefined, moreProps: any) => {
+        const { fans } = this.props;
+
+        const newfans = fans.map((each, idx) => ({
+            ...each,
+            selected: idx === index,
+        }));
+
+        const { onComplete } = this.props;
+        if (onComplete !== undefined) {
+            onComplete(e, newfans, moreProps);
+        }
     };
 }

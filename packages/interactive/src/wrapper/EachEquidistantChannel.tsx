@@ -34,6 +34,7 @@ export interface EachEquidistantChannelProps {
     readonly index?: number;
     readonly onDrag: (e: React.MouseEvent, index: number | undefined, moreProps: any) => void;
     readonly onDragComplete?: (e: React.MouseEvent, moreProps: any) => void;
+    readonly onSelect?: (e: React.MouseEvent, index: number | undefined, moreProps: any) => void;
 }
 
 interface EachEquidistantChannelState {
@@ -46,6 +47,7 @@ export class EachEquidistantChannel extends React.Component<EachEquidistantChann
         interactive: true,
         selected: false,
         onDrag: noop,
+        onSelect: noop,
         hoverText: {
             enable: false,
         },
@@ -133,6 +135,7 @@ export class EachEquidistantChannel extends React.Component<EachEquidistantChann
                     onDragStart={this.handleDragStart}
                     onDrag={this.handleChannelDrag}
                     onDragComplete={onDragComplete}
+                    onClickWhenHover={this.handleClick}
                 />
                 {line1Edge}
                 {line2Edge}
@@ -297,6 +300,13 @@ export class EachEquidistantChannel extends React.Component<EachEquidistantChann
             this.setState({
                 hover: moreProps.hovering,
             });
+        }
+    };
+
+    private readonly handleClick = (e: React.MouseEvent, moreProps: any) => {
+        const { index, onSelect } = this.props;
+        if (onSelect !== undefined) {
+            onSelect(e, index, moreProps);
         }
     };
 }
