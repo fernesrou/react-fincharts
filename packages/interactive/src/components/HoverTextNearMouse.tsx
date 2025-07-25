@@ -140,11 +140,17 @@ export class HoverTextNearMouse extends React.Component<HoverTextNearMouseProps,
 function helper(props: any, moreProps: any) {
     const { show, bgWidth, bgHeight } = props;
 
-    const {
-        mouseXY,
-        chartConfig: { height, width },
-        show: mouseInsideCanvas,
-    } = moreProps;
+    const { mouseXY, chartConfig, show: mouseInsideCanvas } = moreProps;
+
+    if (!chartConfig || !chartConfig.height || !chartConfig.width) {
+        return undefined;
+    }
+
+    if (!mouseXY || !Array.isArray(mouseXY) || mouseXY.length < 2) {
+        return undefined;
+    }
+
+    const { height, width } = chartConfig;
 
     if (show && mouseInsideCanvas) {
         const [x, y] = mouseXY;
