@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/charts",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "description": "React charts specific to finance - Modernized for React 18/19.",
     "main": "./lib/index.js",
     "typings": "./lib/index.d.ts",
@@ -44,7 +44,7 @@
         "@react-fincharts/coordinates": "^3.0.0",
         "@react-fincharts/core": "^3.0.1",
         "@react-fincharts/indicators": "^3.0.0",
-        "@react-fincharts/interactive": "^3.0.1",
+        "@react-fincharts/interactive": "^3.0.2",
         "@react-fincharts/scales": "^3.0.0",
         "@react-fincharts/series": "^3.0.0",
         "@react-fincharts/tooltip": "^3.0.0",
