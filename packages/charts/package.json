@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/charts",
-    "version": "1.0.4",
+    "version": "3.0.1",
     "description": "React charts specific to finance - Modernized for React 18/19.",
     "main": "./lib/index.js",
     "typings": "./lib/index.d.ts",
@@ -39,16 +39,16 @@
         "compile": "tsc -p tsconfig.json"
     },
     "dependencies": {
-        "@react-fincharts/annotations": "^1.0.1",
-        "@react-fincharts/axes": "^1.0.1",
-        "@react-fincharts/coordinates": "^1.0.1",
-        "@react-fincharts/core": "^1.0.3",
-        "@react-fincharts/indicators": "^1.0.1",
-        "@react-fincharts/interactive": "^1.0.2",
-        "@react-fincharts/scales": "^1.0.1",
-        "@react-fincharts/series": "^1.0.1",
-        "@react-fincharts/tooltip": "^1.0.1",
-        "@react-fincharts/utils": "^1.0.1"
+        "@react-fincharts/annotations": "^3.0.0",
+        "@react-fincharts/axes": "^3.0.0",
+        "@react-fincharts/coordinates": "^3.0.0",
+        "@react-fincharts/core": "^3.0.1",
+        "@react-fincharts/indicators": "^3.0.0",
+        "@react-fincharts/interactive": "^3.0.1",
+        "@react-fincharts/scales": "^3.0.0",
+        "@react-fincharts/series": "^3.0.0",
+        "@react-fincharts/tooltip": "^3.0.0",
+        "@react-fincharts/utils": "^2.0.1"
     },
     "peerDependencies": {
         "react": "^17.0.0 || ^18.0.0 || ^19.0.0",

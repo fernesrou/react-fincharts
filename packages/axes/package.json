@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/axes",
-    "version": "1.0.1",
+    "version": "3.0.1",
     "description": "Axes for react-fincharts",
     "publishConfig": {
         "access": "public"
@@ -40,7 +40,7 @@
         "watch": "tsc -p tsconfig.json --watch --preserveWatchOutput"
     },
     "dependencies": {
-        "@react-fincharts/core": "^1.0.1",
+        "@react-fincharts/core": "^3.0.1",
         "@types/d3-scale": "^4.0.8",
         "d3-array": "^3.2.4",
         "d3-force": "^3.0.0",

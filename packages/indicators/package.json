@@ -1,6 +1,6 @@
 {
     "name": "@react-fincharts/indicators",
-    "version": "1.0.1",
+    "version": "3.0.1",
     "description": "Indicators for react-fincharts",
     "publishConfig": {
         "access": "public"
