@@ -1,0 +1,1 @@
+import{a}from"./merge-WqXt2Bz7.js";function g(r){if(!(t=r.length))return[];for(var n=-1,o=a(r,c),u=new Array(o);++n<o;)for(var e=-1,t,f=u[n]=new Array(t);++e<t;)f[e]=r[e][n];return u}function c(r){return r.length}function i(){return g(arguments)}export{i as z};

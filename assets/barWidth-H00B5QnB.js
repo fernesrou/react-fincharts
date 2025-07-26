@@ -1,0 +1,1 @@
+import{l,j as c}from"./withSize-Bqu-aQP_.js";const W=(d,e)=>{const{widthRatio:o}=d,{xAccessor:n,xScale:t,plotData:a}=e,[i,s]=t.range();if(t.invert!=null){const[h,r]=t.domain();return typeof h=="number"&&typeof r=="number"?Math.abs(s-i)/Math.abs(h-r)*o:(t(n(l(a)))-t(n(c(a))))/a.length*o*.7}return Math.abs(s-i)/t.domain().length*o};export{W as p};
